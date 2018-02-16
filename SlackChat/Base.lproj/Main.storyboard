@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
         </array>
     </customFonts>
@@ -38,16 +39,68 @@
         <scene sceneID="izZ-8D-XAa">
             <objects>
                 <viewController id="X4a-AV-tU6" customClass="ChannelVC" customModule="SlackChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bYk-Mq-mWe">
+                    <view key="view" contentMode="scaleToFill" id="bYk-Mq-mWe" customClass="GradientView" customModule="SlackChat" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANNELS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-ag-SYa">
+                                <rect key="frame" x="16" y="88" width="90.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aos-HO-J3d">
+                                <rect key="frame" x="119" y="594" width="52" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0F-Wc-ULh">
+                                <rect key="frame" x="268" y="89" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FS-fN-TMg">
+                                <rect key="frame" x="16" y="569" width="78" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="1xd-NV-iXc"/>
+                                    <constraint firstAttribute="height" constant="78" id="SAQ-kH-EKc"/>
+                                </constraints>
+                                <state key="normal" image="menuProfileIcon"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COE-6D-NTn">
+                                <rect key="frame" x="0.0" y="131.5" width="375" height="417.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkv-w6-2NI">
+                                <rect key="frame" x="16" y="40" width="48" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aos-HO-J3d" firstAttribute="centerY" secondItem="9FS-fN-TMg" secondAttribute="centerY" id="46W-H1-0gi"/>
+                            <constraint firstItem="aos-HO-J3d" firstAttribute="leading" secondItem="9FS-fN-TMg" secondAttribute="trailing" constant="25" id="4ju-NC-jM6"/>
+                            <constraint firstItem="seP-sl-bOJ" firstAttribute="bottom" secondItem="9FS-fN-TMg" secondAttribute="bottom" constant="20" id="DXx-Zn-YOR"/>
+                            <constraint firstItem="Hkv-w6-2NI" firstAttribute="leading" secondItem="seP-sl-bOJ" secondAttribute="leading" constant="16" id="Esg-Cv-QPF"/>
+                            <constraint firstItem="9FS-fN-TMg" firstAttribute="leading" secondItem="seP-sl-bOJ" secondAttribute="leading" constant="16" id="P6h-90-DYw"/>
+                            <constraint firstItem="Hkv-w6-2NI" firstAttribute="top" secondItem="seP-sl-bOJ" secondAttribute="top" constant="20" id="QTO-JZ-6CR"/>
+                            <constraint firstItem="WyV-ag-SYa" firstAttribute="leading" secondItem="seP-sl-bOJ" secondAttribute="leading" constant="16" id="UVy-LG-maP"/>
+                            <constraint firstItem="v0F-Wc-ULh" firstAttribute="centerY" secondItem="WyV-ag-SYa" secondAttribute="centerY" id="XYn-7l-Z90"/>
+                            <constraint firstItem="seP-sl-bOJ" firstAttribute="trailing" secondItem="v0F-Wc-ULh" secondAttribute="trailing" constant="85" id="eGF-hR-lsn"/>
+                            <constraint firstItem="9FS-fN-TMg" firstAttribute="top" secondItem="COE-6D-NTn" secondAttribute="bottom" constant="20" id="gTS-m5-hXi"/>
+                            <constraint firstItem="COE-6D-NTn" firstAttribute="top" secondItem="WyV-ag-SYa" secondAttribute="bottom" constant="20" id="h8b-3S-7Mq"/>
+                            <constraint firstItem="COE-6D-NTn" firstAttribute="leading" secondItem="seP-sl-bOJ" secondAttribute="leading" id="kK4-sP-0LU"/>
+                            <constraint firstItem="COE-6D-NTn" firstAttribute="trailing" secondItem="seP-sl-bOJ" secondAttribute="trailing" id="olP-N6-kko"/>
+                            <constraint firstItem="WyV-ag-SYa" firstAttribute="top" secondItem="Hkv-w6-2NI" secondAttribute="bottom" constant="20" id="sWj-rE-fka"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="seP-sl-bOJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbo-Q0-z8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-252"/>
+            <point key="canvasLocation" x="1016.8" y="-252.32383808095955"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="xEK-Qe-aC4">
@@ -57,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-Nh-qje">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-Nh-qje" customClass="GradientView" customModule="SlackChat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3H-4a-9qQ">
@@ -103,6 +156,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
