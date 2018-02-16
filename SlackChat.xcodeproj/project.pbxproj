@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370EDEFF20372ECC00A0E073 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370EDEFE20372ECC00A0E073 /* LoginVC.swift */; };
 		3765E7F220344FE000AE8E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3765E7F120344FE000AE8E2B /* AppDelegate.swift */; };
 		3765E7F720344FE000AE8E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3765E7F520344FE000AE8E2B /* Main.storyboard */; };
 		3765E7F920344FE000AE8E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3765E7F820344FE000AE8E2B /* Assets.xcassets */; };
@@ -15,12 +16,14 @@
 		37CB659C20348F3D00FA2F54 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB659B20348F3D00FA2F54 /* ChatVC.swift */; };
 		37CB659E20348F6B00FA2F54 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB659D20348F6B00FA2F54 /* ChannelVC.swift */; };
 		37CB65A02034D82D00FA2F54 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB659F2034D82D00FA2F54 /* GradientView.swift */; };
+		37FE64DB2036E43D00EFD231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE64DA2036E43D00EFD231 /* Constants.swift */; };
 		F25F1182965E67D2075E45A0 /* Pods_SlackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC3D57D28FBD7AD623125E9 /* Pods_SlackChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CC3D57D28FBD7AD623125E9 /* Pods_SlackChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlackChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BB84025AE9C553A03E5183 /* Pods-SlackChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChat/Pods-SlackChat.debug.xcconfig"; sourceTree = "<group>"; };
+		370EDEFE20372ECC00A0E073 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3765E7EE20344FE000AE8E2B /* SlackChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3765E7F120344FE000AE8E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3765E7F620344FE000AE8E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		37CB659B20348F3D00FA2F54 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		37CB659D20348F6B00FA2F54 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		37CB659F2034D82D00FA2F54 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		37FE64DA2036E43D00EFD231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5FC809FC099DFFC74B29ED26 /* Pods-SlackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackChat/Pods-SlackChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +81,7 @@
 		3765E7F020344FE000AE8E2B /* SlackChat */ = {
 			isa = PBXGroup;
 			children = (
+				37FE64D92036E42300EFD231 /* Utilities */,
 				37CB659A20348EAD00FA2F54 /* Controller */,
 				37CB659920348EA700FA2F54 /* View */,
 				37CB659820348E9E00FA2F54 /* Model */,
@@ -120,8 +125,17 @@
 			children = (
 				37CB659B20348F3D00FA2F54 /* ChatVC.swift */,
 				37CB659D20348F6B00FA2F54 /* ChannelVC.swift */,
+				370EDEFE20372ECC00A0E073 /* LoginVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		37FE64D92036E42300EFD231 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				37FE64DA2036E43D00EFD231 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		9C63DB3C07B09414891E1259 /* Pods */ = {
@@ -271,9 +285,11 @@
 			files = (
 				37CB659E20348F6B00FA2F54 /* ChannelVC.swift in Sources */,
 				37CB659C20348F3D00FA2F54 /* ChatVC.swift in Sources */,
+				370EDEFF20372ECC00A0E073 /* LoginVC.swift in Sources */,
 				37CB65A02034D82D00FA2F54 /* GradientView.swift in Sources */,
 				3765E7F220344FE000AE8E2B /* AppDelegate.swift in Sources */,
 				37CB65972034518F00FA2F54 /* SWRevealViewController.m in Sources */,
+				37FE64DB2036E43D00EFD231 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
