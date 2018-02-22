@@ -9,9 +9,42 @@
 import UIKit
 
 class SignUpVC: UIViewController {
-
+    
+    //MARK:: Outlets
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBAction func generateBGColorPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func chooseAvatarPressed(_ sender: Any) {
+        
+    }
+    @IBAction func createAccoundPressed(_ sender: Any) {
+        guard let email = emailTextField.text , emailTextField.text != "" else{
+            return
+        }
+        guard let password = passwordTextField.text , passwordTextField.text != "" else{
+            return
+        }
+        
+        AuthService.instance.registerUser(email: email, password: password) { (success) in
+            if success {
+                print("Register User!")
+            }
+        }
+        
+        
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {

@@ -54,7 +54,7 @@ class AuthService {
             "password" : password
         ]
         
-        Alamorfire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString{(response) in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString{(response) in
             if response.result.error == nil {
                 completion(true)
             } else {
@@ -63,6 +63,4 @@ class AuthService {
             }
         }
     }
-    
-    
 }
